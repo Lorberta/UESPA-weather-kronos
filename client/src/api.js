@@ -62,14 +62,14 @@ export default {
 
   getCountryDetail(id) {
     return service
-      .get('/countries/'+id)
+      .get('/countries/' + id)
       .then(res => res.data)
       .catch(errHandler)
   },
 
   updateCountry(id, body) {
     return service
-      .put('/countries/'+id, body)
+      .put('/countries/' + id, body)
       .then(res => res.data)
       .catch(errHandler)
   },
@@ -83,7 +83,7 @@ export default {
 
   deleteCountry(id) {
     return service
-      .delete('/countries/'+id)
+      .delete('/countries/' + id)
       .then(res => res.data)
       .catch(errHandler)
   },
@@ -122,18 +122,17 @@ export default {
       .catch(errHandler)
   },
 
+  getCities() {
+    return service
+      .get('/cities')
+      .then(res => res.data)
+      .catch(errHandler)
+  },
 
-
-  // addPicture(file) {
-  //   const formData = new FormData()
-  //   formData.append("picture", file)
-  //   return service
-  //     .post('/endpoint/to/add/a/picture', formData, {
-  //       headers: {
-  //         'Content-Type': 'multipart/form-data',
-  //       },
-  //     })
-  //     .then(res => res.data)
-  //     .catch(errHandler)
-  // },
+  getWeather(slug) {
+    return service
+      .get(`/cities/${slug}/weather`)
+      .then(res => res.data)
+      .catch(errHandler)
+  },
 }

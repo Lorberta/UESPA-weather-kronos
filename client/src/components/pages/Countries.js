@@ -10,26 +10,26 @@ class Countries extends Component {
   }
   handleDelete(idClicked) {
     api.deleteCountry(idClicked)
-    .then(data => {
-      console.log('Delete', data)
-      this.setState({
-        // The new countries are the ones where their _id are diffrent from idClicked
-        countries: this.state.countries.filter(c => c._id !== idClicked)
+      .then(data => {
+        console.log('Delete', data)
+        this.setState({
+          // The new countries are the ones where their _id are diffrent from idClicked
+          countries: this.state.countries.filter(c => c._id !== idClicked)
+        })
       })
-    })
-    .catch(err => {
-      console.log("ERROR", err);
-    })
+      .catch(err => {
+        console.log("ERROR", err);
+      })
   }
   handleEdit(idClicked) {
     // Redirects the user to '/edit-country/'+idClicked
-    this.props.history.push('/edit-country/'+idClicked)
+    this.props.history.push('/edit-country/' + idClicked)
   }
   render() {
     return (
       <div className="Countries">
         <h2>List of countries</h2>
-        <table style={{margin: 'auto'}}>
+        <table style={{ margin: 'auto' }}>
           <thead>
             <tr>
               <th>Name</th>

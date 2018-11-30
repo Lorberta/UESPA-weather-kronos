@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
 import logo from '../logo.svg';
+import City from './pages/City';
 
 class App extends Component {
   constructor(props) {
@@ -48,6 +49,7 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/profile" component={Profile} />
           <Route path="/secret" component={Secret} />
+          <Route path="/cities/:slug" component={City} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
       </div>

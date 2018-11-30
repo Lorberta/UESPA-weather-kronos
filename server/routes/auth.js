@@ -31,7 +31,7 @@ router.post("/signup", (req, res, next) => {
       req.logIn(userSaved, () => {
         // hide "encryptedPassword" before sending the JSON (it's a security risk)
         userSaved.password = undefined;
-        res.json( userSaved );
+        res.json(userSaved);
       });
     })
     .catch(err => next(err))
