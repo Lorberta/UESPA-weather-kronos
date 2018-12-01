@@ -47,36 +47,47 @@ body {
   font-size: 1.2em;
   color: #32c3ff; }
 
-.KronosRot {
-  width: 300px;
-  height: 300px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 50%;
-  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000; }
+/* html class */
+.wrapper {
+  position: relative;
+  width: 700px;
+  height: 700px; }
 
-.kronos:after {
+/* ========= kronos here ========= */
+.kronos {
   position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: -20px -20px 50px 2px #000 inset;
-  border-radius: 50%; }
+  top: 60%;
+  left: 50%;
+  -webkit-transform: rotateZ(23.5deg) translate(-50%, -50%);
+  -ms-transform: rotate(23.5deg) translate(-50%, -50%);
+  transform: rotateZ(23.5deg) translate(-50%, -50%);
+  margin: auto;
+  border-radius: 50%;
+  background: url("http://csdrive.srru.ac.th/55122420103/texture/earth.jpg") repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  -webkit-box-shadow: 0 0 35px 2px rgba(173, 216, 230, 0.7), inset -25px -5px 40px 20px rgba(0, 0, 0, 0.9), inset 0 0 200px 10px rgba(173, 216, 230, 0.5);
+  box-shadow: 0 0 35px 2px rgba(173, 216, 230, 0.7), inset -25px -5px 40px 20px rgba(0, 0, 0, 0.9), inset 0 0 200px 10px rgba(173, 216, 230, 0.5);
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+  -webkit-animation: rotate 450s linear infinite;
+  animation: rotate 450s linear infinite; }
 
-.kronos > div {
-  width: 200%;
-  height: 100%;
-  animation: spin 30s linear alternate infinite;
-  background: url(https://www.dropbox.com/s/jfw3ru4hx7hdukk/physical-green-tone-world-map-b3.jpg?dl=0);
-  background-size: cover; }
-
-@keyframes spin {
-  to {
-    transform: translateX(-50%); } }
+.clouds {
+  position: absolute;
+  margin: auto;
+  border-radius: 50%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/d/df/Earth-clouds.png") repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  -webkit-box-shadow: inset -25px -5px 40px 20px black;
+  box-shadow: inset -25px -5px 40px 20px black;
+  width: 350px;
+  height: 350px;
+  z-index: 10;
+  opacity: .3;
+  -webkit-animation: rotate 300s linear infinite;
+  animation: rotate 300s linear infinite; }
