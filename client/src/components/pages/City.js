@@ -13,7 +13,8 @@ class City extends Component {
   }
 
   componentDidMount() {
-    api.getWeather("Kronos2")
+    let slug = this.props.match.params.slug
+    api.getWeather(slug)
       .then(weather =>
         this.setState({
           weather: weather,
