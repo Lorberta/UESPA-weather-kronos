@@ -127,7 +127,7 @@ body {
   transform: rotateZ(23.5deg) translate(-50%,-50%);
   margin: auto;
   border-radius: 50%;
-  background: url('http://csdrive.srru.ac.th/55122420103/texture/earth.jpg') repeat;
+  background: url('../images/kronosgreen.jpg') repeat;
   background-position: 0 0;
   background-size: auto 100%;
     -webkit-box-shadow: 0 0 35px 2px rgba(173,216,230,.7), inset -25px -5px 40px 20px rgba(0,0,0,.9), inset 0 0 200px 10px rgba(173,216,230,.5);
@@ -137,8 +137,8 @@ body {
   z-index: 1;
     -webkit-filter: brightness(.8);
   filter: brightness(.8);
-    -webkit-animation: rotate 450s linear infinite;
-  animation: rotate 450s linear infinite;
+    -webkit-animation: rotate 350s linear infinite;
+  animation: rotate 350s linear infinite;
 }
 
 .clouds{
@@ -154,8 +154,8 @@ body {
   height: 350px;
   z-index: 10;
   opacity: .3;
-    -webkit-animation: rotate 300s linear infinite;
-  animation: rotate 300s linear infinite;
+    -webkit-animation: rotate 100s linear infinite;
+  animation: rotate 100s linear infinite;
 }
 
 // @-webkit-keyframes rotate{

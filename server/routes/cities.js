@@ -7,13 +7,13 @@ const axios = require('axios')
 const cities = {
   "bar-or-lhess": { //northern hemisphere
     // _id: 'Tssl',
-    img: '',
+    // img: '../../client/src/images/firstcity',  PATH????????????????????????
     name: "Bar'or Lhess",
     // slug: 'kronos',
     owid: 6453366
   },
   "first-city": { //southern hemisphere
-    img: '.../images/firstcity',
+    img: '',
     name: "First City",
     owid: 6453366
   },
