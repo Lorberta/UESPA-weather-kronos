@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import api from '../../api';
 import { runInThisContext } from 'vm';
+import { Route, Link } from "react-router-dom";
+import CityForecast from './CityForecast'
 
 class City extends Component {
   constructor(props) {
@@ -8,7 +10,8 @@ class City extends Component {
     this.state = {
       currentCity: [],
       weather: {},
-      forecast: {}
+      forecast: {},
+      currentSlug: ""
     }
   }
 
@@ -19,14 +22,23 @@ class City extends Component {
         this.setState({
           weather: weather,
           currentCity: this.state.currentCity,
-          forecast: this.state.forecast
+          forecast: this.state.forecast,
+          currentSlug: slug
         })
       )
   }
 
   render() {
     return (
-      <div><pre>{JSON.stringify(this.state.weather.main, null, 2)}</pre></div>
+      <div>
+        <div>
+          <pre>{JSON.stringify(this.state.weather.main, null, 2)}</pre>
+        </div>
+        <div >
+          <CityForecast slug={this.props.match.params.slug} />
+        </div>
+      </div>
+
     );
   }
 }
