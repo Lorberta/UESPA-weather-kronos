@@ -135,4 +135,11 @@ export default {
       .then(res => res.data)
       .catch(errHandler)
   },
+
+  getForecast(slug) {
+    return service
+      .get(`/cities/${slug}/forecast`)
+      .then(res => res.data)
+      .catch(errHandler)
+  }
 }
