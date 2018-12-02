@@ -26,7 +26,7 @@ class City extends Component {
 
   render() {
     return (
-      <div><pre>{JSON.stringify(this.state.weather.weather, null, 2)}</pre></div>
+      <div><pre>{JSON.stringify(this.state.weather.main, null, 2)}</pre></div>
     );
   }
 }

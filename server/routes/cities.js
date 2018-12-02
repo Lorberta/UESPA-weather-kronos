@@ -94,7 +94,7 @@ router.get('/:slug/weather', (req, res, next) => {
   var city = cities[slug];
 
   var api_key = process.env.OPENWEATHERMAP_API_KEY;
-  url = `http://api.openweathermap.org/data/2.5/weather?id=${city.owid}&?units=metric&APPID=${api_key}`
+  url = `http://api.openweathermap.org/data/2.5/weather?id=${city.owid}&APPID=${api_key}&units=metric`
 
   axios.get(url)
     .then(response => {

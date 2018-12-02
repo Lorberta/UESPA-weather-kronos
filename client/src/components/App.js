@@ -9,7 +9,7 @@ import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
-import logo from '../logo.svg';
+import logo from '../images/uespaLogo.png'
 import City from './pages/City';
 
 class App extends Component {
@@ -29,16 +29,16 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">MERN Boilerplate</h1>
+          <img src={logo} className="App-logo" alt="Uespa Logo" />
+          <h1 className="App-title">UESPA Weather Kronos</h1>
           <NavLink to="/" exact>Home</NavLink>
-          <NavLink to="/countries">Countries</NavLink>
-          <NavLink to="/add-country">Add country</NavLink>
+          {/* <NavLink to="/countries">Countries</NavLink>
+          <NavLink to="/add-country">Add country</NavLink> */}
           {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
           {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
           {api.isLoggedIn() && <Link to="/profile">Profile</Link>}
           {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
-          <NavLink to="/secret">Secret</NavLink>
+          {/* <NavLink to="/secret">Secret</NavLink> */}
         </header>
         <Switch>
           <Route path="/" exact component={Home} />

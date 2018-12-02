@@ -30,7 +30,6 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <h2>Login</h2>
         <form>
           Username: <input type="text" value={this.state.username} onChange={(e) => this.handleInputChange("username", e)} /> <br />
           Password: <input type="password" value={this.state.password} onChange={(e) => this.handleInputChange("password", e)} /> <br />

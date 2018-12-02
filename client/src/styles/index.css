@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background-image: url("../images/tile.png"); }
 
 .info {
   margin: 20px;
@@ -16,11 +17,7 @@ body {
 
 .App {
   text-align: center; }
-  .App .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px; }
   .App .App-header {
-    background-color: #32c3ff;
     padding: 20px;
     color: white; }
     .App .App-header a {
@@ -33,26 +30,14 @@ body {
     font-size: 1.5em; }
   .App .App-intro {
     font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  .App .App-logo {
+    width: 15%;
+    height: auto; }
 
 .Home p {
   font-size: 1.2em; }
 
-.Secret .result {
-  font-size: 1.2em;
-  color: #32c3ff; }
-
 /* html class */
-.wrapper {
-  position: relative;
-  width: 700px;
-  height: 700px; }
-
 /* ========= kronos here ========= */
 .kronos {
   position: absolute;
@@ -91,3 +76,6 @@ body {
   opacity: .3;
   -webkit-animation: rotate 100s linear infinite;
   animation: rotate 100s linear infinite; }
+
+.city-button {
+  text-decoration: none; }

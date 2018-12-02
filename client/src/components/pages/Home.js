@@ -24,14 +24,12 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <h2>Home</h2>
         <div className="KronosRot">
           {/* <KronosRot /> */}
         </div>
-        <p>This is a sample project with the MERN stack</p>
         <ul>
           {Object.entries(this.state.cities).map(([k, value]) => (
-            <li><a href={`/cities/${k}`}>{value.name}</a></li>
+            <a href={`/cities/${k}`} class="city-button">{value.name}<br /></a>
             //   {api.isLoggedIn() && <button onClick={() => this.handleEdit(c._id)}>Edit</button>}
             //   {api.isLoggedIn() && <button onClick={() => this.handleDelete(c._id)}>Delete</button>}
           ))}
