@@ -11,7 +11,8 @@ class City extends Component {
       currentCity: [],
       weather: {},
       forecast: {},
-      currentSlug: ""
+      currentSlug: "",
+      isloading: true
     }
   }
 
@@ -23,16 +24,27 @@ class City extends Component {
           weather: weather,
           currentCity: this.state.currentCity,
           forecast: this.state.forecast,
-          currentSlug: slug
+          currentSlug: slug,
+          isloading: false
         })
       )
   }
 
   render() {
+    if (this.state.isloading) {
+      return <h1>loading...</h1>
+    }
+
     return (
       <div>
+        {/* <ul> {this.state.weather.}</ul> */}
+
         <div>
-          <pre>{JSON.stringify(this.state.weather.main, null, 2)}</pre>
+
+          {this.state.weather.weather.map(e =>
+            <h3>main :{e.main} description : {e.description}icon : {e.icon}</h3>
+          )}
+
         </div>
         <div >
           <CityForecast slug={this.props.match.params.slug} />
