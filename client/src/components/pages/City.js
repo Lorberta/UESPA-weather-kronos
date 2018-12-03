@@ -42,7 +42,7 @@ class City extends Component {
         <div>
 
           {this.state.weather.weather.map(e =>
-            <h3>main :{e.main} description : {e.description}icon : {e.icon}</h3>
+            <h3 style={{ color: "white" }}>main :{e.main} description : {e.description}icon : {e.icon}</h3>
           )}
 
         </div>

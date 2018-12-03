@@ -25,11 +25,11 @@ class Home extends Component {
     return (
       <div className="Home">
         <div className="KronosRot">
-          {/* <KronosRot /> */}
+          <KronosRot />
         </div>
         <ul>
           {Object.entries(this.state.cities).map(([k, value]) => (
-            <a href={`/cities/${k}`} class="city-button">{value.name}<br /></a>
+            <a class="citieslist" href={`/cities/${k}`} class="city-button">{value.name}></a>
             //   {api.isLoggedIn() && <button onClick={() => this.handleEdit(c._id)}>Edit</button>}
             //   {api.isLoggedIn() && <button onClick={() => this.handleDelete(c._id)}>Delete</button>}
           ))}

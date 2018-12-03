@@ -3,11 +3,12 @@ import React, { Component } from 'react'
 export default class KronosRot extends Component {
   render() {
     return (
-      <div class="wrapper">
-        <div class="kronos">
-          <div class="clouds"></div>
-        </div>
+
+      <div className="guto">
+        <div className="kronos"></div>
+        <div className="clouds"></div>
       </div>
+
     )
   }
 }
