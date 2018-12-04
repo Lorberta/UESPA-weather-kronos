@@ -10,32 +10,40 @@
 // @import 'bootstrap/scss/bootstrap';
 // ----------------------------------------
 
+@font-face {
+  font-family: 'klingon';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/klingon.ttf');
+}
+
+@font-face {
+  font-family: 'lcars';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lcars.ttf');
+}
 
 // --------------------
 // Style reusable for all components
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  // background-image: url('../images/nebula960green720.png');
+  font-family: 'lcars';
+  font-size: 4vw;
   background-image: url('../images/tile.png');
-  // background-repeat:no-repeat;
-  // background-size:cover
-  // background-size:contain;
-  // background-position:center;
-}
+  }
 
 .info {
   margin: 20px;
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
-  background-color: #5776e9;
-  color: white;
+  color: #9999CC;
 }
 
 .info.info-danger {
-  background-color: #e73f3f;
+  background-color: #FF9900;
 }
 
 // --------------------
@@ -47,22 +55,32 @@ body {
     // background-image: url('../images/nebula960green720.png');
     // background-size:cover
     padding: 20px;
-    color: white;
+    color: #FF9966;
     
+   
+  }
+
+  .App-Navbar {
+    margin-bottom: 5vh;
+
+    p {
+      font-size: 3vw;
+    }
 
     a {
-      color: white;
+      color: #CC6666;
       padding: 0 5px;
       text-decoration: unset;
     }
 
     a.active {
-      font-weight: bold;
+      color: #FFCC99;
     }
   }
 
   .App-title {
     font-size: 1.5em;
+    margin-bottom: 0
   }
 
   .App-intro {
@@ -117,7 +135,7 @@ body {
 
 /* ========= kronos here ========= */
 
-.guto{
+.planet{
 display:flex;
 margin: auto;
 height: 30vw;
@@ -130,7 +148,6 @@ height: 30vw;
 }
 .kronos{
   position: absolute;
-
   /*   -webkit-transform: rotateZ(23.5deg) translate(-50%,-50%);
     -ms-transform: rotate(23.5deg) translate(-50%,-50%);
   transform: rotateZ(23.5deg) translate(-50%,-50%);
@@ -143,8 +160,8 @@ height: 30vw;
     -webkit-box-shadow: 0 0 35px 2px rgba(173,216,230,.7), inset -25px -5px 40px 20px rgba(0,0,0,.9), inset 0 0 200px 10px rgba(173,216,230,.5);
   box-shadow: 0 0 35px 2px rgba(173,216,230,.7), inset -25px -5px 40px 20px rgba(0,0,0,.9), inset 0 0 200px 10px rgba(173,216,230,.5);
   
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   z-index: 1;
    
     -webkit-filter: brightness(.8);
@@ -155,56 +172,85 @@ height: 30vw;
 
 .clouds{
   transform: rotateZ(23.5deg);
-  position: absolute;
   border-radius: 50%;
   background: url('https://upload.wikimedia.org/wikipedia/commons/d/df/Earth-clouds.png') repeat;
   background-position: 0 0;
   background-size: auto 100%;
     -webkit-box-shadow: inset -25px -5px 40px 20px rgba(0,0,0,1);
   box-shadow: inset -25px -5px 40px 20px rgba(0,0,0,1);
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   z-index: 10;
   opacity: .3;
     -webkit-animation: rotate 100s linear infinite;
   animation: rotate 100s linear infinite;
 }
 
-@-webkit-keyframes rotate{
-  from {
-    background-position: 0 0;
+@media only screen and (max-width: 1000px) {
+  .kronos {
+      width: 200px;
+      height: 200px;
   }
-  to {
-    background-position: -1000px 0;
+  .clouds{
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .kronos {
+      width: 130px;
+      height: 130px;
+  }
+  .clouds{
+    width: 130px;
+    height: 130px;
   }
 }
 
-@keyframes rotate{
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -1000px 0;
-  }
-}
+// @-webkit-keyframes rotate{
+//   from {
+//     background-position: 0 0;
+//   }
+//   to {
+//     background-position: -1000px 0;
+//   }
+// }
+
+// @keyframes rotate{
+//   from {
+//     background-position: 0 0;
+//   }
+//   to {
+//     background-position: -1000px 0;
+//   }
+// }
 
 .city-button {
   text-decoration: none;
-  // display: flex;
-
-}
-
-// .KronosRot {
-//   display: flex;
-//   justify-content: center;
-// }
-
-ul{
-  list-style: none;
+  padding: 10px;    
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;        
 }
 
 .citieslist{
   display: flex;
   align-content: center;
+  margin-top: 20px;
+  font-size: 4vw;
+
+  ul{
+    list-style: none;
+    padding-inline-end: 40px;
+    color: #9999FF;
+
+    // a {
+    //   display: flex;
+    //   justify-content: center;
+
+    // }
+  }
 }
 

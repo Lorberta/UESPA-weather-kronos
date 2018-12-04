@@ -1,7 +1,20 @@
+@font-face {
+  font-family: 'klingon';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/klingon.ttf"); }
+
+@font-face {
+  font-family: 'lcars';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lcars.ttf"); }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'lcars';
+  font-size: 4vw;
   background-image: url("../images/tile.png"); }
 
 .info {
@@ -9,25 +22,29 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
-  background-color: #5776e9;
-  color: white; }
+  color: #9999CC; }
 
 .info.info-danger {
-  background-color: #e73f3f; }
+  background-color: #FF9900; }
 
 .App {
   text-align: center; }
   .App .App-header {
     padding: 20px;
-    color: white; }
-    .App .App-header a {
-      color: white;
+    color: #FF9966; }
+  .App .App-Navbar {
+    margin-bottom: 5vh; }
+    .App .App-Navbar p {
+      font-size: 3vw; }
+    .App .App-Navbar a {
+      color: #CC6666;
       padding: 0 5px;
       text-decoration: unset; }
-    .App .App-header a.active {
-      font-weight: bold; }
+    .App .App-Navbar a.active {
+      color: #FFCC99; }
   .App .App-title {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    margin-bottom: 0; }
   .App .App-intro {
     font-size: large; }
   .App .App-logo {
@@ -39,7 +56,7 @@ body {
 
 /* html class */
 /* ========= kronos here ========= */
-.guto {
+.planet {
   display: flex;
   margin: auto;
   height: 30vw;
@@ -62,8 +79,8 @@ body {
   background-size: auto 100%;
   -webkit-box-shadow: 0 0 35px 2px rgba(173, 216, 230, 0.7), inset -25px -5px 40px 20px rgba(0, 0, 0, 0.9), inset 0 0 200px 10px rgba(173, 216, 230, 0.5);
   box-shadow: 0 0 35px 2px rgba(173, 216, 230, 0.7), inset -25px -5px 40px 20px rgba(0, 0, 0, 0.9), inset 0 0 200px 10px rgba(173, 216, 230, 0.5);
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   z-index: 1;
   -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
@@ -72,38 +89,50 @@ body {
 
 .clouds {
   transform: rotateZ(23.5deg);
-  position: absolute;
   border-radius: 50%;
   background: url("https://upload.wikimedia.org/wikipedia/commons/d/df/Earth-clouds.png") repeat;
   background-position: 0 0;
   background-size: auto 100%;
   -webkit-box-shadow: inset -25px -5px 40px 20px black;
   box-shadow: inset -25px -5px 40px 20px black;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   z-index: 10;
   opacity: .3;
   -webkit-animation: rotate 100s linear infinite;
   animation: rotate 100s linear infinite; }
 
-@-webkit-keyframes rotate {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: -1000px 0; } }
+@media only screen and (max-width: 1000px) {
+  .kronos {
+    width: 200px;
+    height: 200px; }
+  .clouds {
+    width: 200px;
+    height: 200px; } }
 
-@keyframes rotate {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: -1000px 0; } }
+@media only screen and (max-width: 630px) {
+  .kronos {
+    width: 130px;
+    height: 130px; }
+  .clouds {
+    width: 130px;
+    height: 130px; } }
 
 .city-button {
-  text-decoration: none; }
-
-ul {
-  list-style: none; }
+  text-decoration: none;
+  padding: 10px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden; }
 
 .citieslist {
   display: flex;
-  align-content: center; }
+  align-content: center;
+  margin-top: 20px;
+  font-size: 4vw; }
+  .citieslist ul {
+    list-style: none;
+    padding-inline-end: 40px;
+    color: #9999FF; }

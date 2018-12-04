@@ -19,21 +19,21 @@ class Home extends Component {
       )
   }
 
-
-
   render() {
     return (
       <div className="Home">
         <div className="KronosRot">
           <KronosRot />
+          <div className="citieslist">
+            <ul>
+              {Object.entries(this.state.cities).map(([k, value]) => (
+                <a href={`/cities/${k}`} class="city-button">{value.name}</a>
+                //   {api.isLoggedIn() && <button onClick={() => this.handleEdit(c._id)}>Edit</button>}
+                //   {api.isLoggedIn() && <button onClick={() => this.handleDelete(c._id)}>Delete</button>}
+              ))}
+            </ul>
+          </div>
         </div>
-        <ul>
-          {Object.entries(this.state.cities).map(([k, value]) => (
-            <a class="citieslist" href={`/cities/${k}`} class="city-button">{value.name}></a>
-            //   {api.isLoggedIn() && <button onClick={() => this.handleEdit(c._id)}>Edit</button>}
-            //   {api.isLoggedIn() && <button onClick={() => this.handleDelete(c._id)}>Delete</button>}
-          ))}
-        </ul>
       </div>
     );
   }

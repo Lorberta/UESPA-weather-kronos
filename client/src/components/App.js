@@ -30,7 +30,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="Uespa Logo" />
-          <h1 className="App-title">UESPA Weather Kronos</h1>
+          <p className="App-title">UESPA Weather Kronos</p>
+        </header>
+        <div className="App-Navbar">
           <NavLink to="/" exact>Home</NavLink>
           {/* <NavLink to="/countries">Countries</NavLink>
           <NavLink to="/add-country">Add country</NavLink> */}
@@ -39,7 +41,7 @@ class App extends Component {
           {api.isLoggedIn() && <Link to="/profile">Profile</Link>}
           {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
           {/* <NavLink to="/secret">Secret</NavLink> */}
-        </header>
+        </div>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/countries" component={Countries} />
