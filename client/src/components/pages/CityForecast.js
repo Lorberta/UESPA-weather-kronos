@@ -31,10 +31,7 @@ export default class CityForecast extends Component {
     return (
       <div>
         <div>
-
-          <ul style={{ color: "white" }}>{this.state.forecast.map(e => <li>wind speed:{e.wind.speed} temp:{e.main.temp}weather main :{e.weather[0].main} icon :{e.weather[0].icon}</li>)} </ul>
-
-          {/* <pre>{JSON.stringify(this.state.forecast, null, 2)}</pre> */}
+          <ul className="forecastlist" style={{ color: "white" }}>{this.state.forecast.map(e => <li>wind speed:{e.wind.speed} temp:{e.main.temp}weather main :{e.weather[0].main} icon :{e.weather[0].icon}</li>)} </ul>
         </div>
         <button onClick={this.handleClick}>
           5-Day Forecast

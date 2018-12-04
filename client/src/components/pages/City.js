@@ -8,6 +8,7 @@ class City extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      // cities: [],
       currentCity: [],
       weather: {},
       forecast: {},
@@ -28,6 +29,12 @@ class City extends Component {
           isloading: false
         })
       )
+    api.getCities()
+      .then(cities =>
+        this.setState({
+          cities: cities
+        })
+      )
   }
 
   render() {
@@ -40,11 +47,10 @@ class City extends Component {
         {/* <ul> {this.state.weather.}</ul> */}
 
         <div>
-
+          <img className="imgUrl" src={this.state.cities[this.props.match.params.slug].imgUrl} />
           {this.state.weather.weather.map(e =>
             <h3 style={{ color: "white" }}>main :{e.main} description : {e.description}icon : {e.icon}</h3>
           )}
-
         </div>
         <div >
           <CityForecast slug={this.props.match.params.slug} />

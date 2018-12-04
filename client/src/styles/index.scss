@@ -244,13 +244,25 @@ height: 30vw;
   ul{
     list-style: none;
     padding-inline-end: 40px;
-    color: #9999FF;
+    
 
-    // a {
-    //   display: flex;
-    //   justify-content: center;
+    a {
+     color: #c8c8ff;
+    
+    }
 
-    // }
+    a:hover {
+      color: #c36aff;
+     
+     }
   }
 }
 
+.forecastlist {
+  list-style-type: none;
+}
+
+.imgUrl {
+  height: 50%;
+  width: 50%;
+}

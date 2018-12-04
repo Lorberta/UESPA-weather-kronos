@@ -134,5 +134,15 @@ body {
   font-size: 4vw; }
   .citieslist ul {
     list-style: none;
-    padding-inline-end: 40px;
-    color: #9999FF; }
+    padding-inline-end: 40px; }
+    .citieslist ul a {
+      color: #c8c8ff; }
+    .citieslist ul a:hover {
+      color: #c36aff; }
+
+.forecastlist {
+  list-style-type: none; }
+
+.imgUrl {
+  height: 50%;
+  width: 50%; }
