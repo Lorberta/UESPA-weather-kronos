@@ -13,7 +13,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'lcars';
   font-size: 4vw;
   background-image: url("../images/tile.png"); }
 
@@ -28,7 +27,8 @@ body {
   background-color: #FF9900; }
 
 .App {
-  text-align: center; }
+  text-align: center;
+  font-family: 'lcars'; }
   .App .App-header {
     padding: 20px;
     color: #FF9966; }
@@ -107,7 +107,15 @@ body {
     height: 200px; }
   .clouds {
     width: 200px;
-    height: 200px; } }
+    height: 200px; }
+  .federalbutton {
+    width: 51px;
+    height: 30px;
+    border-radius: 5px; }
+  .klingonbutton {
+    width: 45px;
+    height: 30px;
+    border-radius: 5px; } }
 
 @media only screen and (max-width: 630px) {
   .kronos {
@@ -115,7 +123,25 @@ body {
     height: 130px; }
   .clouds {
     width: 130px;
-    height: 130px; } }
+    height: 130px; }
+  .federalbutton {
+    width: 26px;
+    height: 16px;
+    border-radius: 2.5px; }
+  .klingonbutton {
+    width: 24px;
+    height: 16px;
+    border-radius: 2.5px; } }
+
+@media only screen and (min-width: 1000px) {
+  .federalbutton {
+    width: 73px;
+    height: 45px;
+    border-radius: 8px; }
+  .klingonbutton {
+    width: 67px;
+    height: 45px;
+    border-radius: 8px; } }
 
 .city-button {
   text-decoration: none;
@@ -164,7 +190,7 @@ body {
 
 .forecastbutton {
   color: #9999ff;
-  font-size: 15vw;
+  font-size: 2vw;
   background-color: rgba(68, 85, 187, 0.5);
   display: inline-block;
   width: 20%;
@@ -185,12 +211,19 @@ body {
   height: 50%;
   width: 50%; }
 
+.federalbutton {
+  background-image: url("../images/fed1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  float: right;
+  margin-right: 10px; }
+
 .klingonbutton {
-  background-image: url("../images/kl2.gif");
-  background-size: 100%;
-  background-size: 100px auto;
-  width: 200px;
-  height: 100px;
-  border: 0;
-  margin: 0;
-  cursor: pointer; }
+  background-image: url("../images/kl1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  float: right; }

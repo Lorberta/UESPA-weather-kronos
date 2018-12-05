@@ -40,6 +40,10 @@ class App extends Component {
       <div className="App" style={{ fontFamily: this.state.fontStyle }}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="Uespa Logo" />
+          <div className="languagebuttons">
+            <button className="klingonbutton" onClick={this.klingonHandler}></button>
+            <button className="federalbutton" onClick={this.englishHandler}></button>
+          </div>
           <p className="App-title">UESPA Weather Kronos</p>
         </header>
         <div className="App-Navbar">
@@ -49,8 +53,7 @@ class App extends Component {
           {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
           {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
           {api.isLoggedIn() && <Link to="/profile">Profile</Link>}
-          <button className="klingonbutton" onClick={this.klingonHandler}>Klingon</button>
-          <button className="englishbutton" onClick={this.englishHandler}>Federal</button>
+
           {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
           {/* <NavLink to="/secret">Secret</NavLink> */}
         </div>

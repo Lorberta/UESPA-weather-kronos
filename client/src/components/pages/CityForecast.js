@@ -40,9 +40,9 @@ export default class CityForecast extends Component {
               </div>)}
           </div>
         </div>
-        <button className="forecastbutton" onClick={this.handleClick}>
+        <h6 className="forecastbutton" onClick={this.handleClick}>
           5 Day Forecast
-        </button>
+        </h6>
       </div>
     )
   }
