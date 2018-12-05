@@ -19,7 +19,7 @@ export default class CityForecast extends Component {
     api.getForecast(slug)
       .then(forecast =>
         this.setState({
-          forecast: forecast.list,
+          forecast: forecast.list.filter((forecast, index) => index % 8 == 0),
           slug: slug,
         })
       )
@@ -31,9 +31,15 @@ export default class CityForecast extends Component {
     return (
       <div>
         <div>
-          <ul className="forecastlist" style={{ color: "white" }}>{this.state.forecast.map(e => <li>wind speed:{e.wind.speed} temp:{e.main.temp}weather main :{e.weather[0].main} icon :{e.weather[0].icon}</li>)} </ul>
+          <div className="forecastlist" style={{ color: "white" }}>
+            {this.state.forecast.map(e =>
+              <div>
+                <img className="weathericon" src={`http://openweathermap.org/img/w/${e.weather[0].icon}.png`} /> <br />
+                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />Wind [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />Weather :{e.weather[0].main}
+              </div>)}
+          </div>
         </div>
-        <button onClick={this.handleClick}>
+        <button className="forecastonclick" onClick={this.handleClick}>
           5-Day Forecast
         </button>
       </div>

@@ -45,11 +45,13 @@ class City extends Component {
     return (
       <div>
         {/* <ul> {this.state.weather.}</ul> */}
-
-        <div>
+        <div className="weather">
           <img className="imgUrl" src={this.state.cities[this.props.match.params.slug].imgUrl} />
+
           {this.state.weather.weather.map(e =>
-            <h3 style={{ color: "white" }}>main :{e.main} description : {e.description}icon : {e.icon}</h3>
+            <h3 style={{ color: "white" }}>
+              <img className="weathericon" src={`http://openweathermap.org/img/w/${e.icon}.png`} />
+              <br />main :{e.main} <br /> description : {e.description}</h3>
           )}
         </div>
         <div >
