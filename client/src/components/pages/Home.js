@@ -30,7 +30,7 @@ class Home extends Component {
           <div className="citieslist">
             <ul>
               {Object.entries(this.state.cities).map(([k, value]) => (
-                <Link to={`/cities/${k}`} class="city-button">{value.name}</Link>
+                <Link to={`/cities/${k}`} className="city-button">{value.name}</Link>
                 //   {api.isLoggedIn() && <button onClick={() => this.handleEdit(c._id)}>Edit</button>}
                 //   {api.isLoggedIn() && <button onClick={() => this.handleDelete(c._id)}>Delete</button>}
               ))}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from '../../api';
 import { runInThisContext } from 'vm';
 import { Route, Link } from "react-router-dom";
+import Translation from '../elements/Translations';
 
 
 export default class CityForecast extends Component {
@@ -34,13 +35,13 @@ export default class CityForecast extends Component {
           <div className="forecastlist" style={{ color: "white" }}>
             {this.state.forecast.map(e =>
               <div>
-                <img className="weathericon" src={`http://openweathermap.org/img/w/${e.weather[0].icon}.png`} /> <br />
-                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />Wind [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />Weather :{e.weather[0].main}
+                <img className="forecasticon" src={`http://openweathermap.org/img/w/${e.weather[0].icon}.png`} /> <br />
+                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />"Wind" [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />Weather :{e.weather[0].main}
               </div>)}
           </div>
         </div>
-        <button className="forecastonclick" onClick={this.handleClick}>
-          5-Day Forecast
+        <button className="forecastbutton" onClick={this.handleClick}>
+          5 Day Forecast
         </button>
       </div>
     )

@@ -16,7 +16,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      countries: []
+      countries: [],
+      fontStyle: "lcars"
     }
     // api.loadUser();
   }
@@ -24,10 +25,19 @@ class App extends Component {
   handleLogoutClick(e) {
     api.logout()
   }
-
+  klingonHandler = (e) => {
+    this.setState({
+      fontStyle: "klingon"
+    })
+  }
+  englishHandler = (e) => {
+    this.setState({
+      fontStyle: "lcars"
+    })
+  }
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{ fontFamily: this.state.fontStyle }}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="Uespa Logo" />
           <p className="App-title">UESPA Weather Kronos</p>
@@ -39,6 +49,8 @@ class App extends Component {
           {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
           {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
           {api.isLoggedIn() && <Link to="/profile">Profile</Link>}
+          <button className="klingonbutton" onClick={this.klingonHandler}>Klingon</button>
+          <button className="englishbutton" onClick={this.englishHandler}>Federal</button>
           {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
           {/* <NavLink to="/secret">Secret</NavLink> */}
         </div>
