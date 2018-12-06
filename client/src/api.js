@@ -107,5 +107,12 @@ export default {
       .get(`/cities/${slug}/forecast`)
       .then(res => res.data)
       .catch(errHandler)
+  },
+
+  getSystems() {
+    return service
+      .get('/systems')
+      .then(res => res.data)
+      .catch(errHandler)
   }
 }
