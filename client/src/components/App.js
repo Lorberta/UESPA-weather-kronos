@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
 import Home from './pages/Home';
-import Countries from './pages/Countries';
-import AddCountry from './pages/AddCountry';
-import EditCountry from './pages/EditCountry';
 import Secret from './pages/Secret';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
@@ -16,7 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      countries: [],
+      cities: [],
       fontStyle: "lcars"
     }
     // api.loadUser();
@@ -48,8 +45,6 @@ class App extends Component {
         </header>
         <div className="App-Navbar">
           <NavLink to="/" exact>Choose City</NavLink>
-          {/* <NavLink to="/countries">Countries</NavLink>
-          <NavLink to="/add-country">Add country</NavLink> */}
           {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
           {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
           {api.isLoggedIn() && <Link to="/profile">Profile</Link>}
@@ -59,9 +54,6 @@ class App extends Component {
         </div>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/countries" component={Countries} />
-          <Route path="/add-country" component={AddCountry} />
-          <Route path="/edit-country/:id" component={EditCountry} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
           <Route path="/profile" component={Profile} />

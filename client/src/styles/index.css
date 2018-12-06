@@ -182,12 +182,15 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  .weather p {
+    margin-top: 0; }
 
 .imgUrl {
   height: 50%;
   width: 50%; }
 
 .forecastlist {
+  color: white;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -239,3 +242,6 @@ body {
   border: none;
   float: right;
   opacity: 0.85; }
+
+.forecastbutton:hover {
+  color: #00ff00; }

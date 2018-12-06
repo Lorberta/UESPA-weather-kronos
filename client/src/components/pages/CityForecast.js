@@ -27,16 +27,15 @@ export default class CityForecast extends Component {
   }
 
   render() {
-    console.log(this.state.forcast)
-    //wind.speed , main.temp , weather[0].main weather[0].icon 
+    console.log(this.state.forecast)
     return (
       <div className="forecast">
         <div>
-          <div className="forecastlist" style={{ color: "white" }}>
+          <div className="forecastlist">
             {this.state.forecast.map(e =>
               <div>
                 <img className="forecasticon" src={`http://openweathermap.org/img/w/${e.weather[0].icon}.png`} /> <br />
-                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />"Wind" [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />Weather :{e.weather[0].main}
+                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />Wind [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />Weather :{e.weather[0].main}
               </div>)}
           </div>
         </div>

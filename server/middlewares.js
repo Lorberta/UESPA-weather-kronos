@@ -6,9 +6,9 @@ function isLoggedIn(req, res, next) {
   else next({ status: 403, message: 'Unauthorized' })
 }
 
-// Example on how to use this middleware: checkId('countryId')
+// Example on how to use this middleware: checkId('cityId')
 function checkId(idField) {
-  return (req,res,next) => {
+  return (req, res, next) => {
     let id = req.params[idField]
     if (!mongoose.Types.ObjectId.isValid(id)) {
       // 400 = Bad Request

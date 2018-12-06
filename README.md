@@ -128,12 +128,6 @@ So now you can go to
 <!-- TODO: give instructions for Cloudinary -->
 <!-- TODO: give instructions for route guards -->
 
-### `server/routes/countries.js`
-
-- `router.get('/')`: Route to get all countries
-- `router.post('/')`: Route to add a country
-
-
 
 ## Deployement on Heroku
 

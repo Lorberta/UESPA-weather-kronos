@@ -53,40 +53,6 @@ export default {
       .get('/logout')
   },
 
-  getCountries() {
-    return service
-      .get('/countries')
-      .then(res => res.data)
-      .catch(errHandler)
-  },
-
-  getCountryDetail(id) {
-    return service
-      .get('/countries/' + id)
-      .then(res => res.data)
-      .catch(errHandler)
-  },
-
-  updateCountry(id, body) {
-    return service
-      .put('/countries/' + id, body)
-      .then(res => res.data)
-      .catch(errHandler)
-  },
-
-  postCountries(data) {
-    return service
-      .post('/countries', data)
-      .then(res => res.data)
-      .catch(errHandler)
-  },
-
-  deleteCountry(id) {
-    return service
-      .delete('/countries/' + id)
-      .then(res => res.data)
-      .catch(errHandler)
-  },
 
   getSecret() {
     return service

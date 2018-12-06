@@ -41,18 +41,20 @@ class City extends Component {
     if (this.state.isloading) {
       return <h1>loading...</h1>
     }
+    console.log(this.state.weather)
 
     return (
       <div>
-        {/* <ul> {this.state.weather.}</ul> */}
         <div className="weather">
           <img className="imgUrl" src={this.state.cities[this.props.match.params.slug].imgUrl} />
-
-          {this.state.weather.weather.map(e =>
-            <a>
-              <img className="weathericon" src={`http://openweathermap.org/img/w/${e.icon}.png`} />
-              <br />main :{e.main} <br /> description : {e.description}</a>
-          )}
+          <div>
+            {this.state.weather.weather.map(e =>
+              <a>
+                <img className="weathericon" src={`http://openweathermap.org/img/w/${e.icon}.png`} />
+                <br />Condition :{e.main} <br /> </a>
+            )}
+            <p> Wind [km/h]: {this.state.weather.wind.speed} <br /> Temp [°C]: {this.state.weather.main.temp} </p>
+          </div>
         </div>
         <div >
           <CityForecast slug={this.props.match.params.slug} />
