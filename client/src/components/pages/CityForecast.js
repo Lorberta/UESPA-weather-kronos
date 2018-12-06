@@ -30,7 +30,7 @@ export default class CityForecast extends Component {
     console.log(this.state.forcast)
     //wind.speed , main.temp , weather[0].main weather[0].icon 
     return (
-      <div>
+      <div className="forecast">
         <div>
           <div className="forecastlist" style={{ color: "white" }}>
             {this.state.forecast.map(e =>
@@ -40,9 +40,9 @@ export default class CityForecast extends Component {
               </div>)}
           </div>
         </div>
-        <h6 className="forecastbutton" onClick={this.handleClick}>
+        <p className="forecastbutton" onClick={this.handleClick}>
           5 Day Forecast
-        </h6>
+        </p>
       </div>
     )
   }

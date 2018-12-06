@@ -49,9 +49,9 @@ class City extends Component {
           <img className="imgUrl" src={this.state.cities[this.props.match.params.slug].imgUrl} />
 
           {this.state.weather.weather.map(e =>
-            <h3 style={{ color: "white" }}>
+            <a>
               <img className="weathericon" src={`http://openweathermap.org/img/w/${e.icon}.png`} />
-              <br />main :{e.main} <br /> description : {e.description}</h3>
+              <br />main :{e.main} <br /> description : {e.description}</a>
           )}
         </div>
         <div >

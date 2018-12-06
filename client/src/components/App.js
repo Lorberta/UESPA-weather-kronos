@@ -47,7 +47,7 @@ class App extends Component {
           <p className="App-title">UESPA Weather Kronos</p>
         </header>
         <div className="App-Navbar">
-          <NavLink to="/" exact>Home</NavLink>
+          <NavLink to="/" exact>Choose City</NavLink>
           {/* <NavLink to="/countries">Countries</NavLink>
           <NavLink to="/add-country">Add country</NavLink> */}
           {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}

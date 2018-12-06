@@ -6,54 +6,52 @@ const axios = require('axios')
 
 const cities = {
   "bar-or-lhess": { //northern hemisphere
-    // _id: 'Tssl',
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033883/Kronos/barorlhess.jpg',
     name: "Bar'or Lhess",
-    // slug: 'kronos',
     owid: 6453366
   },
   "first-city": { //southern hemisphere
-    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1543941568/Kronos/firstCity.jpg',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1543941568/Kronos/firstcity.jpg',
     name: "First City",
     owid: 6453366
   },
   "ha-r-kling-jaa": { //northern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033982/Kronos/harklingjaa.jpg',
     name: "Ha'r Kling Jaa",
     owid: 6453366
   },
   "h-vek-tar": { //southern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033906/Kronos/hvektar.jpg',
     name: "H'Vek Tar",
     owid: 6453366
   },
   "kl-alath": { //southern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033981/Kronos/klalath.jpg',
     name: "Kl'alath",
     owid: 6453366
   },
   "l-chorta": { //northern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033890/Kronos/lchorta.jpg',
     name: "L'chorta",
     owid: 6453366
   },
   "lhess-taal-dax": { //northern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033856/Kronos/lhesstaaldax.jpg',
     name: "Lhess Taal Dax",
     owid: 6453366
   },
   "l-vln-lak-raal": { //northern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033838/Kronos/lvlnlakraal.jpg',
     name: "L'vln Lak Raal",
     owid: 6453366
   },
   "lyn-knor-tak": { //southern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033981/Kronos/lynknortak.jpg',
     name: "Lyn'Knor Tak",
     owid: 6453366
   },
   "mor-em-cha": { //southern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033799/Kronos/moremcha.jpg',
     name: "Mor'em Cha",
     owid: 6453366
   },
@@ -73,12 +71,12 @@ const cities = {
   //   owid: 6453366
   // },
   "t-val-k-rang": { //southern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033981/Kronos/tvalkrang.jpg',
     name: "T'Val K'rang",
     owid: 6453366
   },
   "v-hechess": { //southern hemisphere
-    imgUrl: '',
+    imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033982/Kronos/vhechess.jpg',
     name: "V'hechess",
     owid: 6453366
   },
