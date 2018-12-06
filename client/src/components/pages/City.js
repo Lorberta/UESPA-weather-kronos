@@ -39,12 +39,15 @@ class City extends Component {
 
   render() {
     if (this.state.isloading) {
-      return <h1>loading...</h1>
+      return <a>loading...</a>
     }
     console.log(this.state.weather)
 
     return (
       <div>
+        <div className="todaysdate">
+          <p>{(new Date((parseInt(this.state.weather.dt) + 7316265600) * 1000).toLocaleDateString())}</p>
+        </div>
         <div className="weather">
           <img className="imgUrl" src={this.state.cities[this.props.match.params.slug].imgUrl} />
           <div>

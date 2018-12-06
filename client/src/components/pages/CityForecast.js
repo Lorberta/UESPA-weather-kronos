@@ -35,12 +35,12 @@ export default class CityForecast extends Component {
             {this.state.forecast.map(e =>
               <div>
                 <img className="forecasticon" src={`http://openweathermap.org/img/w/${e.weather[0].icon}.png`} /> <br />
-                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />Wind [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />Weather :{e.weather[0].main}
+                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />Condition :{e.weather[0].main} <br /> Wind [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />
               </div>)}
           </div>
         </div>
         <p className="forecastbutton" onClick={this.handleClick}>
-          5 Day Forecast
+          5 Day Forecast here
         </p>
       </div>
     )

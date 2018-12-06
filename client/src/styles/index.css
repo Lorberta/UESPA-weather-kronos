@@ -33,7 +33,7 @@ body {
     padding: 20px;
     color: #FF9966; }
   .App .App-Navbar {
-    margin-bottom: 5vh; }
+    margin-bottom: 2vh; }
     .App .App-Navbar p {
       font-size: 3vw; }
     .App .App-Navbar a {
@@ -54,7 +54,6 @@ body {
 .Home p {
   font-size: 1.2em; }
 
-/* html class */
 .planet {
   display: flex;
   margin: auto;
@@ -175,6 +174,10 @@ body {
     .citieslist ul a:hover {
       color: #c36aff; }
 
+.todaysdate {
+  font-size: 4vw;
+  color: #9999ff; }
+
 .weather {
   margin: auto;
   color: #9999ff;
@@ -213,6 +216,9 @@ body {
   cursor: pointer;
   border-radius: 30px; }
 
+.forecastbutton:hover {
+  color: #CC6666; }
+
 .forecasticon {
   width: 35%;
   height: 35%; }
@@ -242,6 +248,3 @@ body {
   border: none;
   float: right;
   opacity: 0.85; }
-
-.forecastbutton:hover {
-  color: #00ff00; }
