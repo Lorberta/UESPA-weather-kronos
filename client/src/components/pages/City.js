@@ -39,14 +39,14 @@ class City extends Component {
 
   render() {
     if (this.state.isloading) {
-      return <a>loading...</a>
+      return <a></a>
     }
     console.log(this.state.weather)
 
     return (
       <div>
         <div className="todaysdate">
-          <p>{(new Date((parseInt(this.state.weather.dt) + 7316265600) * 1000).toLocaleDateString())}</p>
+          <p>{this.props.match.params.slug} <br /> {(new Date((parseInt(this.state.weather.dt) + 7316270000) * 1000).toLocaleDateString())}</p>
         </div>
         <div className="weather">
           <img className="imgUrl" src={this.state.cities[this.props.match.params.slug].imgUrl} />
@@ -56,7 +56,7 @@ class City extends Component {
                 <img className="weathericon" src={`http://openweathermap.org/img/w/${e.icon}.png`} />
                 <br />Condition :{e.main} <br /> </a>
             )}
-            <p> Wind [km/h]: {this.state.weather.wind.speed} <br /> Temp [°C]: {this.state.weather.main.temp} </p>
+            <p> Wind [m/s]: {this.state.weather.wind.speed} <br /> Temp [°C]: {this.state.weather.main.temp} </p>
           </div>
         </div>
         <div >

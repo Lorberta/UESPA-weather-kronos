@@ -58,17 +58,17 @@ export default class Profile extends Component {
     })
     let file = e.target.files[0]
     api.addPicture(file)
-    .then(data => {
-      this.setState({
-        pictureUrl: data.pictureUrl
+      .then(data => {
+        this.setState({
+          pictureUrl: data.pictureUrl
+        })
       })
-    })
   }
   render() {
     // If there is 
-    if (!this.state.username) {
-      return <div><h2>Profile</h2><p>Loading...</p></div>
-    }
+    // if (!this.state.username) {
+    //   return <div><h2>Profile</h2><p>Loading...</p></div>
+    // }
     return (
       <div className="Profile">
         <h2>Profile</h2>
@@ -88,7 +88,7 @@ export default class Profile extends Component {
           <br />
 
           <input type="file" onChange={this.handleFileChange} /> <br />
-          {this.state.pictureUrl && <img src={this.state.pictureUrl} style={{height: 200}} />}
+          {this.state.pictureUrl && <img src={this.state.pictureUrl} style={{ height: 200 }} />}
           <br />
 
 

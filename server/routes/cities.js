@@ -13,7 +13,7 @@ const cities = {
   "first-city": { //southern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1543941568/Kronos/firstcity.jpg',
     name: "First City",
-    owid: 6453366
+    owid: 217831
   },
   "ha-r-kling-jaa": { //northern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033982/Kronos/harklingjaa.jpg',
@@ -23,37 +23,37 @@ const cities = {
   "h-vek-tar": { //southern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033906/Kronos/hvektar.jpg',
     name: "H'Vek Tar",
-    owid: 6453366
+    owid: 5854686
   },
   "kl-alath": { //southern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033981/Kronos/klalath.jpg',
     name: "Kl'alath",
-    owid: 6453366
+    owid: 3899539
   },
   "l-chorta": { //northern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033890/Kronos/lchorta.jpg',
     name: "L'chorta",
-    owid: 6453366
+    owid: 3865086
   },
   "lhess-taal-dax": { //northern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033856/Kronos/lhesstaaldax.jpg',
     name: "Lhess Taal Dax",
-    owid: 6453366
+    owid: 1496747
   },
   "l-vln-lak-raal": { //northern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033838/Kronos/lvlnlakraal.jpg',
     name: "L'vln Lak Raal",
-    owid: 6453366
+    owid: 5550452
   },
   "lyn-knor-tak": { //southern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033981/Kronos/lynknortak.jpg',
     name: "Lyn'Knor Tak",
-    owid: 6453366
+    owid: 202068
   },
   "mor-em-cha": { //southern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033799/Kronos/moremcha.jpg',
     name: "Mor'em Cha",
-    owid: 6453366
+    owid: 216281
   },
   // "qam-chee": { //ancient city
   //   imgUrl: '',
@@ -73,12 +73,12 @@ const cities = {
   "t-val-k-rang": { //southern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033981/Kronos/tvalkrang.jpg',
     name: "T'Val K'rang",
-    owid: 6453366
+    owid: 4901390
   },
   "v-hechess": { //southern hemisphere
     imgUrl: 'https://res.cloudinary.com/lorberta/image/upload/v1544033982/Kronos/vhechess.jpg',
     name: "V'hechess",
-    owid: 6453366
+    owid: 3143244
   },
 };
 

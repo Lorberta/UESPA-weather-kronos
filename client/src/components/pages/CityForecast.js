@@ -27,7 +27,7 @@ export default class CityForecast extends Component {
   }
 
   render() {
-    console.log(this.state.forecast)
+    // console.log(this.state.forecast)
     return (
       <div className="forecast">
         <div>
@@ -35,7 +35,7 @@ export default class CityForecast extends Component {
             {this.state.forecast.map(e =>
               <div>
                 <img className="forecasticon" src={`http://openweathermap.org/img/w/${e.weather[0].icon}.png`} /> <br />
-                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />Condition :{e.weather[0].main} <br /> Wind [km/h]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />
+                {(new Date((parseInt(e.dt) + 7316352000) * 1000).toLocaleDateString())} <br />Condition :{e.weather[0].main} <br /> Wind [m/s]: {e.wind.speed} <br /> Temp. [°C]: {e.main.temp}<br />
               </div>)}
           </div>
         </div>
