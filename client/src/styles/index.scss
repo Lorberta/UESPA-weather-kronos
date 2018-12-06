@@ -115,8 +115,8 @@ body {
 //   height: 700px;
 // }
 
-// Styling of the planet, kronos layer and clouds layer
-.planet{
+// Styling of the planet kronos: kronos layer and clouds layer
+.kronosplanet{
 display:flex;
 margin: auto;
 height: 30vw;
@@ -221,23 +221,23 @@ height: 30vw;
   }
 }
 
-// @-webkit-keyframes rotate{
-//   from {
-//     background-position: 0 0;
-//   }
-//   to {
-//     background-position: -1000px 0;
-//   }
-// }
+@-webkit-keyframes rotate{
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0;
+  }
+}
 
-// @keyframes rotate{
-//   from {
-//     background-position: 0 0;
-//   }
-//   to {
-//     background-position: -1000px 0;
-//   }
-// }
+@keyframes rotate{
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0;
+  }
+}
 
 .city-button {
   text-decoration: none;
@@ -370,4 +370,54 @@ height: 30vw;
   border:none;
   float:right;
   opacity: 0.85;
+}
+
+.planetlink {
+  color: #FF9900;
+  font-size: 3vw;
+  text-decoration: none;
+  float: left;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#text{
+  z-index: 3 !important;
+}
+
+.orbitimage {
+  /* content: url('../images/kronosorbit1.jpg'); */
+  background-image: url('../images/kronosorbit1.jpg');
+  background-size: 100% 100%;
+  background-size: contain;
+  background-size: cover;
+  width: 75%;
+  height: 40%;
+  /* display: block; */
+  margin: 0 auto;
+  z-index: 0;
+}
+
+#text{
+padding-top: 28%
+
+}
+.text {
+  color: #FF9900;
+  z-index: 100;
+  padding-top: 15px;
+}
+
+.klingonPlanets{
+  
+height: 80vw;
+color: #FF9900;
+  z-index: 100;
+  position: relative;
+  bottom: 0px;
 }

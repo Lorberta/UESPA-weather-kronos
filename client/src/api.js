@@ -110,9 +110,9 @@ export default {
       .catch(errHandler)
   },
 
-  getSystems() {
+  getPlanets() {
     return service
-      .get('/systems')
+      .get('/planets')
       .then(res => res.data)
       .catch(errHandler)
   }

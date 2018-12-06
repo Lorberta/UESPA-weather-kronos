@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import api from '../api';
 import logo from '../images/uespaLogo.png'
 import City from './pages/City';
+import Planets from './pages/Planets';
 
 class App extends Component {
   constructor(props) {
@@ -37,7 +38,8 @@ class App extends Component {
       <div className="App" style={{ fontFamily: this.state.fontStyle }}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="Uespa Logo" />
-          <div className="languagebuttons">
+          <div className="App-header2">
+            <NavLink to="/planets" exact className="planetlink">Other planets</NavLink>
             <button className="klingonbutton" onClick={this.klingonHandler}></button>
             <button className="federalbutton" onClick={this.englishHandler}></button>
           </div>
@@ -59,6 +61,7 @@ class App extends Component {
           <Route path="/profile" component={Profile} />
           <Route path="/secret" component={Secret} />
           <Route path="/cities/:slug" component={City} />
+          <Route path="/planets" component={Planets} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
       </div>
