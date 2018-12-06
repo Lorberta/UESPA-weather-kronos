@@ -20,7 +20,7 @@ export default class Planets extends Component {
           </div>
         </div>
       })
-    }, 5000)
+    }, 4000)
   }
 
   render() {

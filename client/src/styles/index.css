@@ -1,0 +1,369 @@
+@font-face {
+  font-family: 'klingon';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/klingon.ttf"); }
+
+@font-face {
+  font-family: 'lcars';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lcars.ttf"); }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 4vw;
+  background-image: url("../images/tile.png"); }
+
+.info {
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  color: #9999CC; }
+
+.info.info-danger {
+  background-color: #FF9900; }
+
+.App {
+  text-align: center;
+  font-family: 'lcars'; }
+  .App .App-header {
+    padding: 20px;
+    color: #FF9966; }
+  .App .App-Navbar {
+    margin-bottom: 2vh; }
+    .App .App-Navbar p {
+      font-size: 3vw; }
+    .App .App-Navbar a {
+      color: #CC6666;
+      padding: 0 5px;
+      text-decoration: unset; }
+    .App .App-Navbar a.active {
+      color: #FFCC99; }
+  .App .App-title {
+    font-size: 1.5em;
+    margin-bottom: 0; }
+  .App .App-intro {
+    font-size: large; }
+  .App .App-logo {
+    width: 15%;
+    height: auto; }
+
+.Home p {
+  font-size: 1.2em; }
+
+.Signup {
+  color: #FF9900; }
+
+.signupbutton {
+  font-size: 3vw;
+  color: #FFCC99;
+  background-color: rgba(68, 85, 187, 0.5);
+  display: inline-block;
+  width: 18%;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 30px; }
+
+.signupbutton:hover {
+  color: #CC6666; }
+
+.signupusername {
+  border-radius: 30px 30px 0 0;
+  margin-bottom: 2px;
+  border: transparent;
+  background-color: #ffcc99; }
+
+.signupemail {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: transparent;
+  background-color: #ffcc99; }
+
+.signuppassword {
+  border-radius: 0 0 30px 30px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: transparent;
+  background-color: #ffcc99; }
+
+.Login {
+  color: #FF9900; }
+
+.loginbutton {
+  font-size: 3vw;
+  color: #FFCC99;
+  background-color: rgba(68, 85, 187, 0.5);
+  display: inline-block;
+  width: 15%;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 30px; }
+
+.loginbutton:hover {
+  color: #CC6666; }
+
+.loginusername {
+  border-radius: 30px 30px 0 0;
+  margin-bottom: 2px;
+  border: transparent;
+  background-color: #FFcc99; }
+
+.loginpassword {
+  border-radius: 0 0 30px 30px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: transparent;
+  background-color: #FFcc99; }
+
+.kronosplanet {
+  display: flex;
+  margin: auto;
+  height: 30vw;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch; }
+
+.kronos {
+  position: absolute;
+  /*   -webkit-transform: rotateZ(23.5deg) translate(-50%,-50%);
+    -ms-transform: rotate(23.5deg) translate(-50%,-50%);
+  transform: rotateZ(23.5deg) translate(-50%,-50%);
+   */
+  transform: rotateZ(23.5deg);
+  border-radius: 50%;
+  background: url("../images/kronosgreen.jpg") repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  -webkit-box-shadow: 0 0 35px 2px rgba(173, 216, 230, 0.7), inset -25px -5px 40px 20px rgba(0, 0, 0, 0.9), inset 0 0 200px 10px rgba(173, 216, 230, 0.5);
+  box-shadow: 0 0 35px 2px rgba(173, 216, 230, 0.7), inset -25px -5px 40px 20px rgba(0, 0, 0, 0.9), inset 0 0 200px 10px rgba(173, 216, 230, 0.5);
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+  -webkit-animation: rotate 350s linear infinite;
+  animation: rotate 350s linear infinite; }
+
+@keyframes rotate {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -1000px 0; } }
+
+.clouds {
+  transform: rotateZ(23.5deg);
+  border-radius: 50%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/d/df/Earth-clouds.png") repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  -webkit-box-shadow: inset -25px -5px 40px 20px black;
+  box-shadow: inset -25px -5px 40px 20px black;
+  width: 300px;
+  height: 300px;
+  z-index: 10;
+  opacity: .3;
+  -webkit-animation: rotate 100s linear infinite; }
+
+@keyframes rotate {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -1000px 0; } }
+
+@media only screen and (max-width: 1000px) {
+  .kronos {
+    width: 200px;
+    height: 200px; }
+  .clouds {
+    width: 200px;
+    height: 200px; }
+  .federalbutton {
+    width: 51px;
+    height: 30px;
+    border-radius: 5px; }
+  .klingonbutton {
+    width: 45px;
+    height: 30px;
+    border-radius: 5px; } }
+
+@media only screen and (max-width: 630px) {
+  .kronos {
+    width: 125px;
+    height: 125px; }
+  .clouds {
+    width: 125px;
+    height: 125px; }
+  .federalbutton {
+    width: 26px;
+    height: 16px;
+    border-radius: 2.5px; }
+  .klingonbutton {
+    width: 24px;
+    height: 16px;
+    border-radius: 2.5px; } }
+
+@media only screen and (min-width: 1000px) {
+  .federalbutton {
+    width: 73px;
+    height: 45px;
+    border-radius: 8px; }
+  .klingonbutton {
+    width: 67px;
+    height: 45px;
+    border-radius: 8px; } }
+
+.city-button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  color: #9999ff;
+  font-size: 3vw;
+  background-color: rgba(68, 85, 187, 0.5);
+  display: inline-block;
+  width: 20%;
+  border: 0;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 30px; }
+
+.citieslist {
+  display: flex;
+  align-content: center;
+  margin-top: 20px;
+  font-size: 4vw; }
+  .citieslist ul {
+    list-style: none;
+    padding-inline-end: 40px; }
+    .citieslist ul a {
+      color: #FFCC99;
+      padding: 30px; }
+    .citieslist ul a:hover {
+      color: #c36aff; }
+
+.todaysdate {
+  font-size: 4vw;
+  color: #9999ff; }
+  .todaysdate p {
+    margin-top: 0; }
+
+.weather {
+  margin: auto;
+  color: #9999ff;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .weather p {
+    margin-top: 0; }
+
+.imgUrl {
+  height: 50%;
+  width: 50%; }
+
+.forecastlist {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 15px;
+  font-size: 3vw;
+  flex-wrap: nowrap;
+  outline-color: #9999ff;
+  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5); }
+
+.forecastbutton {
+  font-size: 3vw;
+  color: #FFCC99;
+  background-color: rgba(68, 85, 187, 0.5);
+  display: inline-block;
+  width: 40%;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 30px; }
+
+.forecastbutton:hover {
+  color: #CC6666; }
+
+.forecasticon {
+  width: 35%;
+  height: 35%; }
+
+.weathericon {
+  width: 8vw; }
+
+.imgUrl {
+  height: 50%;
+  width: 50%; }
+
+.federalbutton {
+  background-image: url("../images/fed1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  float: right;
+  margin-right: 10px;
+  opacity: 0.85; }
+
+.klingonbutton {
+  background-image: url("../images/kl1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  float: right;
+  opacity: 0.85; }
+
+.planetlink {
+  color: #FF9900;
+  font-size: 3vw;
+  text-decoration: none;
+  float: left; }
+
+.container {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center; }
+
+#text {
+  z-index: 3 !important; }
+
+.orbitimage {
+  background-image: url("../images/kronosorbit1.jpg");
+  background-size: 100% 100%;
+  background-size: contain;
+  background-size: cover;
+  width: 75%;
+  height: 40%;
+  margin: 0 auto;
+  z-index: 0; }
+
+#text {
+  padding-top: 28%; }
+
+.text {
+  color: #FF9900;
+  z-index: 100;
+  padding-top: 15px; }
+
+.klingonPlanets {
+  height: 80vw;
+  color: #FF9900;
+  z-index: 100;
+  position: relative;
+  bottom: 0px; }

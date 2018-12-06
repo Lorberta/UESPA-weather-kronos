@@ -31,9 +31,9 @@ class Login extends Component {
     return (
       <div className="Login">
         <form>
-          Username: <input type="text" value={this.state.username} onChange={(e) => this.handleInputChange("username", e)} /> <br />
-          Password: <input type="password" value={this.state.password} onChange={(e) => this.handleInputChange("password", e)} /> <br />
-          <button onClick={(e) => this.handleClick(e)}>Login</button>
+          Username: <input className="loginusername" type="text" value={this.state.username} onChange={(e) => this.handleInputChange("username", e)} /> <br />
+          Password: <input className="loginpassword" type="password" value={this.state.password} onChange={(e) => this.handleInputChange("password", e)} /> <br />
+          <p className="loginbutton" onClick={(e) => this.handleClick(e)}>Login</p>
         </form>
         {this.state.message && <div className="info info-danger">
           {this.state.message}
