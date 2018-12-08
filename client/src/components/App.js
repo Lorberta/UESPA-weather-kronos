@@ -47,9 +47,9 @@ class App extends Component {
         </header>
         <div className="App-Navbar">
           <NavLink to="/" exact>Choose City</NavLink>
-          {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
+          {/* {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
           {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-          {api.isLoggedIn() && <Link to="/profile">Profile</Link>}
+          {api.isLoggedIn() && <Link to="/profile">Profile</Link>} */}
 
           {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
           {/* <NavLink to="/secret">Secret</NavLink> */}
